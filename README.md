@@ -1,2 +1,2 @@
-# yyIM
+# yyInstantMessage
 聊天
