@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"runtime"
 	"time"
-	xorm_mysql "yyInstantMessage/instant-message/common-library/xorm-mysql"
-	"yyInstantMessage/instant-message/common-library/xorm-mysql/xormMysqlConfig"
+	xorm_mysql "yyInstantMessage/common-library/xorm-mysql"
+	"yyInstantMessage/common-library/xorm-mysql/xormMysqlConfig"
 )
 
 type instantMessageObj struct {

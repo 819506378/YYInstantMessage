@@ -6,29 +6,29 @@ import (
 	"io/ioutil"
 	"os"
 	"runtime"
-	yy_log "yyInstantMessage/instant-message/common-library/hippoLog"
-	"yyInstantMessage/instant-message/common-library/xorm-mysql/xormMysqlConfig"
+	snowflake "yyInstantMessage/common-library/snowFlake"
+	"yyInstantMessage/common-library/xorm-mysql/xormMysqlConfig"
 	instant_message_main "yyInstantMessage/instant-message/instant-message-main"
 )
 
-func init() {
-
-}
+func init() {}
 
 func main() {
 	configDir := os.Getenv("YYINSTANTMESSAGECONFIG")
 	imObj := instant_message_main.NewInstantMessageMain()
 
+	/* 设置雪花ID的机器号 */
+	snowflake.SetMachineId(1)
 	/* 初始化日志库 */
 	InitLog()
 	/* 初始化数据库 */
 	imObj.InitXormOptMysql(GetXormConfig(configDir))
+	/* 初始化redis */
+
 }
 
 //InitLog
-func InitLog() {
-	yy_log.Infof("simple zap logger example")
-}
+func InitLog() {}
 
 //GetXormConfig 读取mysql配置文件
 func GetXormConfig(configDir string) *xormMysqlConfig.XormMysqlParam {

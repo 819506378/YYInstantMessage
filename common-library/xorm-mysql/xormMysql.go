@@ -6,7 +6,7 @@ import (
 	"github.com/go-xorm/xorm"
 	"runtime"
 	"time"
-	"yyInstantMessage/instant-message/common-library/xorm-mysql/xormMysqlConfig"
+	"yyInstantMessage/common-library/xorm-mysql/xormMysqlConfig"
 )
 
 type XormOptMysql struct {
